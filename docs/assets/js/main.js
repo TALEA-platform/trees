@@ -28,7 +28,7 @@
   });
 
   map.addControl(new maplibregl.NavigationControl(), 'top-right');
-  map.addControl(new maplibregl.ScaleControl({ maxWidth: 200, unit: 'metric' }), 'bottom-left');
+  map.addControl(new maplibregl.ScaleControl({ maxWidth: 200, unit: 'metric' }), 'bottom-right');
 
   class LegendControl {
     onAdd(map) {
@@ -230,20 +230,26 @@ function applyFilters() {
       infoPanel.innerHTML = `
         <strong>${props.nome || props.classe}</strong><br/>
         <ul style="padding-left: 1em;">
-          <li><b>Famiglia:</b> ${props.family}</li>
-          <li><b>Classe:</b> ${props.classe}</li>
-          <li><b>Dimora:</b> ${props.dimora}</li>
-          <li><b>Irrigazione:</b> ${props.irriga}</li>
+          <li><b>specie:</b> ${props.classe}</li>
+          <li><b>famiglia:</b> ${props.family}</li>
+          <li><b>dimora:</b> ${props.dimora}</li>
+          <!--
+          <li><b>irrigazione:</b> ${props.irriga}</li>
           <li><b>Pregio:</b> ${props.pregio}</li>
           <li><b>Data inventario:</b> ${props.data_inv}</li>
           <li><b>Data aggiornamento:</b> ${props.data_agg}</li>
+          -->
           <li><b>Distanza edificio:</b> ${props.d_edif}</li>
+          <!--
           <li><b>Data impianto:</b> ${props.data_impnt}</li>
           <li><b>In patrimonio:</b> ${props.in_patrim}</li>
           <li><b>Anni impianto:</b> ${props.anni_impnt}</li>
-          <li><b>Altezza:</b> ${props.height} m</li>
-          <li><b>Circonferenza chioma:</b> ${props.girth} cm</li>
+          -->
+          <li><b>altezza:</b> ${props.height} m</li>
+          <li><b>circonferenza chioma:</b> ${props.girth} cm</li>
+          <!--
           <li><b>Tipo chioma:</b> ${props.chioma_tipo}</li>
+          -->
         </ul>`;
     });
 
