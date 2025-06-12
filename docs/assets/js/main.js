@@ -27,7 +27,7 @@
     zoom: zoom
   });
 
-  map.addControl(new maplibregl.NavigationControl(), 'top-right');
+  map.addControl(new maplibregl.NavigationControl(), 'top-left');
   map.addControl(new maplibregl.ScaleControl({ maxWidth: 200, unit: 'metric' }), 'bottom-right');
 
   class LegendControl {
